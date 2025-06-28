@@ -1,0 +1,19 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontSize: {
+        'course-deatails-heading-smaill': ['26px', '36px'],
+        'course-deatails-heading-large': ['36px', '44px'],
+        'home-heading-small': ['28px', '34px'],
+        'home-heading-large': ['48px', '56px'],
+        'default': ['15px', '21px']
+      }
+    },
+  },
+  plugins: [],
+}
