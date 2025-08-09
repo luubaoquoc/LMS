@@ -4,7 +4,7 @@ import { v2 as cloudinary } from 'cloudinary'
 
 export const updateRoleToEducator = async (req, res) => {
     try {
-        const userId = req.auth.userId;
+        const { userId } = req.auth();
 
         await clerkClient.users.updateUserMetadata(userId, {
             publicMetadata: {
@@ -22,13 +22,13 @@ export const addCourse = async (req, res) => {
     try {
         const { courseData } = req.body
         const imageFile = req.file
-        const educatorId = req.auth.userId
+        const { userId } = req.auth();
 
         if (!imageFile) {
             return res.json({ success: false, message: 'Thumbnail Not Attached' })
         }
         const parsedCourseData = await JSON.parse(courseData)
-        parsedCourseData.educator = educatorId
+        parsedCourseData.educator = userId
         const newCourse = await Course.create(parsedCourseData)
         const imageUpload = await cloudinary.uploader.upload(imageFile.path)
         newCourse.courseThumbnail = imageUpload.secure_url
