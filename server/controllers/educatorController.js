@@ -24,13 +24,13 @@ export const addCourse = async (req, res) => {
     try {
         const { courseData } = req.body
         const imageFile = req.file
-        const { educatorId } = req.auth();
+        const { userId } = req.auth();
 
         if (!imageFile) {
             return res.json({ success: false, message: 'Thumbnail Not Attached' })
         }
         const parsedCourseData = await JSON.parse(courseData)
-        parsedCourseData.educator = educatorId
+        parsedCourseData.educator = userId
         const newCourse = await Course.create(parsedCourseData)
         const imageUpload = await cloudinary.uploader.upload(imageFile.path)
         newCourse.courseThumbnail = imageUpload.secure_url
