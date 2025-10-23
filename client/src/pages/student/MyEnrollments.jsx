@@ -46,14 +46,14 @@ const MyEnrollments = () => {
   return (
     <>
       <div className='md:px-36 px-8 pt-10'>
-        <h1 className='text-2xl font-semibold'>My Enrollments</h1>
+        <h1 className='text-2xl font-semibold'>Khóa học của tôi</h1>
         <table className='md:table-auto table-fixed w-full overflow-hidden border mt-10'>
           <thead className='text-gray-900 border-b border-gray-500/20 text-sm text-left max-sm:hidden'>
             <tr>
-              <th className='px-4 py-3 font-semibold truncate'>Course</th>
-              <th className='px-4 py-3 font-semibold truncate'>Duration</th>
-              <th className='px-4 py-3 font-semibold truncate'>Completed</th>
-              <th className='px-4 py-3 font-semibold truncate'>Status</th>
+              <th className='px-4 py-3 font-semibold truncate'>Khóa học</th>
+              <th className='px-4 py-3 font-semibold truncate'>Thời gian</th>
+              <th className='px-4 py-3 font-semibold truncate'>Hoàn thành</th>
+              <th className='px-4 py-3 font-semibold truncate'>Trạng thái</th>
             </tr>
           </thead>
           <tbody className='text-gray-700'>
@@ -70,13 +70,13 @@ const MyEnrollments = () => {
                   {CalculateCourseDuration(course)}
                 </td>
                 <td className='px-4 py-3 max-sm:hidden'>
-                  {progressArray[index] && `${progressArray[index].lectureCompleted} / ${progressArray[index].totalLectures}`} <span>Lectures</span>
+                  {progressArray[index] && `${progressArray[index].lectureCompleted} / ${progressArray[index].totalLectures}`} <span>Bài học</span>
                 </td>
                 <td className='px-4 py-3 max-sm:text-right'>
                   <button onClick={() => navigate('/player/' + course._id)} className='px-3 sm:px-5 py-1.5 sm:py-2 bg-blue-600 max-sm:text-xs
                    text-white'>
                     {progressArray[index] && progressArray[index].lectureCompleted /
-                      progressArray[index].totalLectures === 1 ? 'Completed' : 'On Going'}
+                      progressArray[index].totalLectures === 1 ? 'Hoàn thành' : 'Đang diễn ra'}
                   </button>
                 </td>
               </tr>

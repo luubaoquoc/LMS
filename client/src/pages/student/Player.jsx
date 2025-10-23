@@ -111,7 +111,7 @@ const Player = () => {
       gap-10 md:px-36'>
         {/* left column */}
         <div className='text-gray-800'>
-          <h2 className='text-xl font-semibold'>Course Structure</h2>
+          <h2 className='text-xl font-semibold'>Nội dung khóa học</h2>
           <div className='pt-5'>
             {courseData && courseData.courseContent.map((chapter, index) => (
               <div key={index} className='border border-gray-300 bg-white mb-2 rounded' >
@@ -122,7 +122,7 @@ const Player = () => {
                       src={assets.down_arrow_icon} alt="down_arrow_icon" />
                     <p className='font-medium md:text-base text-sm'>{chapter.chapterTitle}</p>
                   </div>
-                  <p className='text-sm md:text-default'>{chapter.chapterContent.length} lectures - {calculateChapterTime(chapter)}</p>
+                  <p className='text-sm md:text-default'>{chapter.chapterContent.length} bài học - {calculateChapterTime(chapter)}</p>
                 </div>
                 <div className={`overflow-hidden transition-all duration-300 ${openSections[index] ? 'max-h-96' : 'max-h-0'}`}>
                   <ul className='list-disc md:pl-10 pl-4 pr-4 py-2 text-gray-300 border-t border-gray-300'>
@@ -136,7 +136,7 @@ const Player = () => {
                               onClick={() => setPlayerData({
                                 ...lecture, chapter: index + 1, lecture: i + 1
                               })}
-                              className='text-blue-300 cursor-pointer'>Watch</p>}
+                              className='text-blue-300 cursor-pointer'>Xem</p>}
                             <p>{humanizeDuration(lecture.lectureDuration * 60 * 1000, { units: ['h', 'm'] })}</p>
                           </div>
                         </div>
@@ -148,7 +148,7 @@ const Player = () => {
             ))}
           </div>
           <div className='flex items-center gap-2 py-3 mt-10'>
-            <h1 className='text-xl font-bold'>Rate this Course:</h1>
+            <h1 className='text-xl font-bold'>Đánh giá:</h1>
             <Rating initialRating={initialRating} onRate={handlerate} />
           </div>
         </div>
@@ -163,7 +163,7 @@ const Player = () => {
                 <p>{playerData.chapter}.{playerData.lecture} {playerData.lectureTitle}
                 </p>
                 <button onClick={() => markLectureAsCompleted(playerData.lectureId)}
-                  className='text-blue-600'>{progressData && progressData?.lectureCompleted?.includes(playerData.lectureId) ? 'Completed' : 'Mark Complete'}</button>
+                  className='text-blue-600'>{progressData && progressData?.lectureCompleted?.includes(playerData.lectureId) ? 'Hoàn thành' : 'Đánh dấu hoàn thành'}</button>
               </div>
             </div>
           )

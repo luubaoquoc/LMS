@@ -103,25 +103,25 @@ export const dummyEducatorData = {
 
 export const dummyTestimonial = [
     {
-        name: 'Donald Jackman',
+        name: 'Luu Bao Quoc',
         role: 'SWE 1 @ Amazon',
         image: assets.profile_img_1,
         rating: 5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'Tôi đã sử dụng Imagify gần hai năm, chủ yếu cho Instagram, và tôi thấy nó cực kỳ thân thiện với người dùng, giúp công việc của tôi trở nên dễ dàng hơn rất nhiều.',
     },
     {
-        name: 'Richard Nelson',
+        name: 'Tra My',
         role: 'SWE 2 @ Samsung',
         image: assets.profile_img_2,
         rating: 4,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'Tôi đã sử dụng Imagify gần hai năm, chủ yếu cho Instagram, và tôi thấy nó cực kỳ thân thiện với người dùng, giúp công việc của tôi trở nên dễ dàng hơn rất nhiều.',
     },
     {
-        name: 'James Washington',
+        name: 'Le Van Sy',
         role: 'SWE 2 @ Google',
         image: assets.profile_img_3,
         rating: 4.5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'Tôi đã sử dụng Imagify gần hai năm, chủ yếu cho Instagram, và tôi thấy nó cực kỳ thân thiện với người dùng, giúp công việc của tôi trở nên dễ dàng hơn rất nhiều.',
     },
 ];
 

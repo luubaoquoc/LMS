@@ -4,9 +4,9 @@ import { assets, dummyTestimonial } from '../../assets/assets'
 const TestimonialsSection = () => {
   return (
     <div className='pb-14 px-8 md:px-0'>
-      <h2 className='text-3xl font-medium text-gray-800'>Testimonails</h2>
-      <p className='md:text-base text-gray-500 mt-3'>Hear from our learners as they share their journeys of transformation, succes
-        and how our <br /> platform has made a difference in their lives.
+      <h2 className='text-3xl font-medium text-gray-800'>Cảm nhận của học viên</h2>
+      <p className='md:text-base text-gray-500 mt-3'>Nghe từ những người học của chúng tôi khi họ chia sẻ hành trình chuyển đổi, thành công
+        và cách nền tảng của chúng tôi đã tạo ra sự khác biệt trong cuộc sống của họ.
       </p>
       <div className='grid grid-cols-auto mt-14 gap-4'>
         {dummyTestimonial.map((testimonial, index) => (
@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
               </div>
               <p className='text-gray-500 mt-5'>{testimonial.feedback}</p>
             </div>
-            <a href="#" className='text-blue-500 underline px-5'>Read more</a>
+            <a href="#" className='text-blue-500 underline px-5'>Đọc thêm</a>
           </div>
         ))
         }

@@ -42,34 +42,34 @@ const DashBoard = () => {
             <img src={assets.patients_icon} alt="patients_icon" />
             <div>
               <p className='text-2xl font-medium text-gray-600'>{dashdoardData.enrolledStudentsData.length}</p>
-              <p className='text-base text-gray-500'>Total Enrollments</p>
+              <p className='text-base text-gray-500'>Tổng số học viên</p>
             </div>
           </div>
           <div className='flex items-center gap-3 shadow-card border border-blue-500 p-4 w-60 rounded-md'>
             <img src={assets.appointments_icon} alt="appointments_icon" />
             <div>
               <p className='text-2xl font-medium text-gray-600'>{dashdoardData.totalCourses}</p>
-              <p className='text-base text-gray-500'>Total Courses</p>
+              <p className='text-base text-gray-500'>Tổng số khóa học</p>
             </div>
           </div>
           <div className='flex items-center gap-3 shadow-card border border-blue-500 p-4 w-60 rounded-md'>
             <img src={assets.earning_icon} alt="earning_icon" />
             <div>
               <p className='text-2xl font-medium text-gray-600'>{currency}{dashdoardData.totalEarnings}</p>
-              <p className='text-base text-gray-500'>Total Earnings</p>
+              <p className='text-base text-gray-500'>Tổng thu nhập</p>
             </div>
           </div>
         </div>
         <div>
-          <h2 className='pb-4 text-lg font-medium'>Latest Enrollments</h2>
+          <h2 className='pb-4 text-lg font-medium'>Học viên mới nhất</h2>
           <div className='flex flex-col items-center max-w-4xl w-full overflow-hidden rounded-md bg-white
           border border-gray-500/20'>
             <table className='table-fixed md:table-auto w-full overflow-hidden'>
               <thead className='text-gray-900 border-b border-gray-500/20 text-sm text-left'>
                 <tr>
                   <th className='px-4 py-3 font-semibold text-center hidden sm:table-cell'>#</th>
-                  <th className='px-4 py-3 font-semibold'>Student Name</th>
-                  <th className='px-4 py-3 font-semibold'>Course Title</th>
+                  <th className='px-4 py-3 font-semibold'>Tên học viên</th>
+                  <th className='px-4 py-3 font-semibold'>Tiêu đề khóa học</th>
                 </tr>
               </thead>
               <tbody className='text-sm text-gray-500'>

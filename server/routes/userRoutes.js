@@ -1,6 +1,5 @@
 import express from 'express'
 import { addUserRating, getUserCourseProgress, getUserData, purchaseCourse, updateUserCourseProgress, userEnrolleredCourses } from '../controllers/userController.js'
-import { useReducer } from 'react'
 
 const userRouter = express.Router()
 

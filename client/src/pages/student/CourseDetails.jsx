@@ -100,9 +100,9 @@ const CourseDetails = () => {
 
             <p>{courseData.courseRatings.length} {courseData.courseRatings.length > 1 ? 'students' : 'student'} </p>
           </div>
-          <p>Course by <span className='text-blue-600 underline'>{courseData.educator.name}</span></p>
+          <p>Tác giả: <span className='text-blue-600 underline'>{courseData.educator.name}</span></p>
           <div className='pt-8 text-gray-800'>
-            <h2 className='text-xl font-semibold'>Course Structure</h2>
+            <h2 className='text-xl font-semibold'>Nội dung khóa học</h2>
 
             <div className='pt-5'>
               {courseData.courseContent.map((chapter, index) => (
@@ -114,7 +114,7 @@ const CourseDetails = () => {
                         src={assets.down_arrow_icon} alt="down_arrow_icon" />
                       <p className='font-medium md:text-base text-sm'>{chapter.chapterTitle}</p>
                     </div>
-                    <p className='text-sm md:text-default'>{chapter.chapterContent.length} lectures - {calculateChapterTime(chapter)}</p>
+                    <p className='text-sm md:text-default'>{chapter.chapterContent.length} bài học - {calculateChapterTime(chapter)}</p>
                   </div>
                   <div className={`overflow-hidden transition-all duration-300 ${openSections[index] ? 'max-h-96' : 'max-h-0'}`}>
                     <ul className='list-disc md:pl-10 pl-4 pr-4 py-2 text-gray-300 border-t border-gray-300'>
@@ -141,7 +141,7 @@ const CourseDetails = () => {
             </div>
           </div>
           <div className='py-20 text-sm md:text-default'>
-            <h3 className='text-xl font-semibold text-gray-800'> Course Description</h3>
+            <h3 className='text-xl font-semibold text-gray-800'> Mô tả khóa học</h3>
             <p className='pt-3 rich-text' dangerouslySetInnerHTML={{ __html: courseData.courseDescription }}></p>
           </div>
         </div>
@@ -192,15 +192,15 @@ const CourseDetails = () => {
               </div>
             </div>
             <button onClick={enrollCourse} className='md:mt-6 mt-4 w-full py-3 rounded bg-blue-600 text-white font-medium'>
-              {isAlreadyEnrolled ? 'Already Enrolled' : 'Enroll Now'}</button>
+              {isAlreadyEnrolled ? 'Đã mua' : 'Đăng ký'}</button>
             <div className='pt-6'>
-              <p className='md:text-xl text-lg font-medium text-gray-800'>What's in the course?</p>
+              <p className='md:text-xl text-lg font-medium text-gray-800'>Khóa học bao gồm gì?</p>
               <ul className='ml-4 pt-2 text-sm md:text-default list-disc text-gray-500'>
-                <li>Lifetime access with free update.</li>
-                <li>Step-by-step, hans-on project guidance.</li>
-                <li>Downloadable resources and source code.</li>
-                <li>Quizzes to test you knowledge.</li>
-                <li>Certificate of completion.</li>
+                <li>Truy cập trọn đời cùng với các bản cập nhật miễn phí.</li>
+                <li>Hướng dẫn chi tiết từng bước với dự án thực tế.</li>
+                <li>Tài nguyên và mã nguồn có thể tải xuống.</li>
+                <li>Bài kiểm tra giúp bạn ôn luyện kiến thức.</li>
+                <li>Chứng chỉ hoàn thành sau khóa học.</li>
               </ul>
             </div>
           </div>

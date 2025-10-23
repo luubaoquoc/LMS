@@ -47,13 +47,13 @@ const Navbar = () => {
         <div className='flex items-center gap-5'>
           {user && <>
             <button onClick={becomeEducator}>{isEducator ? 'Educator DashBoard' : 'Become Educator'}</button>
-            | <Link to='/my-enrollments'>My Enrollments</Link>
+            | <Link to='/my-enrollments'>Khóa học của tôi</Link>
           </>
           }
         </div>
         {user ? <UserButton /> :
           <button onClick={() => openSignIn()} className='bg-blue-600 
-        text-white px-5 py-2 rounded-full'>Create Account</button>}
+        text-white px-5 py-2 rounded-full'>Đăng ký</button>}
       </div>
 
       {/* for Phone screem */}
@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className='flex items-center gap-1 sm:gap-2 max-sm:text-xs'>
           {user && <>
             <button onClick={becomeEducator}>{isEducator ? 'Educator DashBoard' : 'Become Educator'}</button>
-            | <Link to='/my-enrollments'>My Enrollments</Link>
+            | <Link to='/my-enrollments'>Khóa học của tôi</Link>
           </>
           }
         </div>
